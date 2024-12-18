@@ -34,3 +34,14 @@ public:
     }
 };
 
+int main()
+{
+    StudentManagementSystem sms;
+    sms.addStudent("Alice", 20, "S001");
+    sms.addStudent("Bob", 22, "S002");
+
+    std::cout << "Student List:" << std::endl;
+    sms.displayStudents();
+
+    return 0;
+}
