@@ -12,3 +12,8 @@ public:
     Student(std::string n, int a, std::string id) : name(n), age(a), studentID(id) {}
 };
 
+class StudentManagementSystem
+{
+private:
+    std::vector<Student> students;
+
