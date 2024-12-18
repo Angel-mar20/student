@@ -17,3 +17,10 @@ class StudentManagementSystem
 private:
     std::vector<Student> students;
 
+public:
+    void addStudent(std::string name, int age, std::string studentID)
+    {
+        students.emplace_back(name, age, studentID);
+    }
+
+    
