@@ -7,6 +7,12 @@
     Student(std::string n, int a, std::string i) : name(n),
     age(a),
     id(i) {}
-}
+};
 
-;
+class StudentManagementSystem {
+    private:
+        std::vector<Student> students;
+
+    public: void addStudent(std::string name, int age, std::string id) {
+        students.emplace_back(name, age, id);
+    }
