@@ -23,4 +23,14 @@ public:
         students.emplace_back(name, age, studentID);
     }
 
-    
+    void displayStudents()
+    {
+        for (const auto &student : students)
+        {
+            std::cout << "Name: " << student.name
+                      << ", Age: " << student.age
+                      << ", Student ID: " << student.studentID << std::endl;
+        }
+    }
+};
+
