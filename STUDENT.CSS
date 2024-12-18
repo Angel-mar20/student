@@ -16,3 +16,9 @@ class StudentManagementSystem {
     public: void addStudent(std::string name, int age, std::string id) {
         students.emplace_back(name, age, id);
     }
+
+        void displayStudents() {
+            for (const auto& student : students) {
+                std: :cout << "Name: " << student.name << ", Age: " << student.age << ", ID: " << student.id << std::endl;
+            }
+        }
