@@ -1,12 +1,15 @@
-#include <iostream>#include <vector>#include <string>class Student {
+#include <iostream>
+#include <vector>
+#include <string>
+class Student {
     public:
         std::string name;
-    int age;
-    std: :string id;
+        int age;
+        std: :string id;
 
-    Student(std::string n, int a, std::string i) : name(n),
-    age(a),
-    id(i) {}
+        Student(std::string n, int a, std::string i) : name(n),
+        age(a),
+        id(i) {}
 };
 
 class StudentManagementSystem {
@@ -17,8 +20,20 @@ class StudentManagementSystem {
         students.emplace_back(name, age, id);
     }
 
-        void displayStudents() {
-            for (const auto& student : students) {
-                std: :cout << "Name: " << student.name << ", Age: " << student.age << ", ID: " << student.id << std::endl;
+    void displayStudents() {
+        for (const auto& student : students) {
+            std: :cout << "Name: " << student.name << ", Age: " << student.age << ", ID: " << student.id << std::endl;
+        }
+    }
+
+    void findStudentById(std::string id) {
+        for (const auto& student : students) {
+            if (student.id==id) {
+                std: :cout << "Found Student - Name: " << student.name << ", Age: " << student.age << ", ID: " << student.id << std::endl;
+                return;
             }
         }
+
+        std::cout << "Student with ID " << id << " not found." << std::endl;
+    }
+};
